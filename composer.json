@@ -1,0 +1,19 @@
+{
+    "name": "matok/shunting-yard",
+    "require-dev": {
+        "phpunit/phpunit": "^7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Matok\\ShuntingYard\\": "src/",
+            "Matok\\Test\\ShuntingYard\\": "tests/ShuntingYard"
+        }
+    },
+    "authors": [
+        {
+            "name": "Matej Kuna",
+            "email": "mat.kuna@gmail.com"
+        }
+    ],
+    "require": {}
+}
