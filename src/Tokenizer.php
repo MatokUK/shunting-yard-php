@@ -2,6 +2,8 @@
 
 namespace Matok\ShuntingYard;
 
+use Matok\ShuntingYard\Token\ValueToken;
+
 class Tokenizer
 {
     /** @var string */
@@ -25,11 +27,11 @@ class Tokenizer
             }
 
             if (!$this->isDigitOnPosition($i)) {
-                yield new Token($this->expression[$i]);
+                yield new ValueToken($this->expression[$i]);
             } else {
                 $digit .= $this->expression[$i];
                 if ($this->isDigitFinished($i)) {
-                    yield new Token($digit);
+                    yield new ValueToken($digit);
                     $digit = '';
                 }
             }

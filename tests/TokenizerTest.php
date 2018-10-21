@@ -3,7 +3,7 @@
 namespace Matok\Test\ShuntingYard;
 
 use Matok\ShuntingYard\Tokenizer;
-use Matok\ShuntingYard\TokenInterface;
+use Matok\ShuntingYard\Token\TokenInterface;
 use PHPUnit\Framework\TestCase;
 
 class TokenizerTest extends TestCase

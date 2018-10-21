@@ -1,6 +1,6 @@
 <?php
 
-namespace Matok\ShuntingYard;
+namespace Matok\ShuntingYard\Token;
 
 abstract class AbstractToken implements TokenInterface
 {
@@ -16,13 +16,13 @@ abstract class AbstractToken implements TokenInterface
         return $this->data;
     }
 
-    public function isValue()
+    public function getOperandsCount(): int
     {
-        return true;
+        return 0;
     }
 
-    public function isFunction()
+    final public function isValue(): bool
     {
-        return !$this->isValue();
+        return !$this->isFunction();
     }
 }
